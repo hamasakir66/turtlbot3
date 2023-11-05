@@ -1,0 +1,28 @@
+<launch>
+  <!-- Source setup.bash file -->
+  <node name="source_setup_bash" pkg="my_package" type="shell" args="source /path/to/devel/setup.bash" output="screen" />
+
+  <!-- roscoreを起動 -->
+  <node name="roscore" pkg="ros" type="core" output="screen" />
+
+  <!-- turtlebot3_gazeboを起動 -->
+  <include file="/home/rui/Documents/catkin_ws/src/gazebo_turtle/turtlebot3_simulations/turtlebot3_gazebo/launch/turtlebot3_world.launch">
+    <param name="TURTLEBOT3_MODEL" type="string" value="burger" />
+
+  </include>
+
+  <!-- turtlebot3_navigationを起動 -->
+  <include file="/home/rui/Documents/catkin_ws/src/gazebo_turtle/turtlebot3/turtlebot3_navigation/launch/turtlebot3_navigation.launch">
+    <arg name="map_file" value="$(env HOME)/map.yaml" />
+  </include>
+
+  <!-- Run your Python script -->
+  <node name="run_ini_posi" pkg="my_turtle" type="ini_posi.py" output="screen">
+    <param name="TURTLEBOT3_MODEL" type="string" value="burger" />
+  </node>
+
+  <!-- my_turtle パッケージの stuck.py ノードを起動 -->
+  <node name="my_turtle_move" pkg="my_turtle" type="stuck.py" output="screen">
+    <param name="TURTLEBOT3_MODEL" type="string" value="burger" />
+  </node>
+</launch>
