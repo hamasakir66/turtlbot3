@@ -48,9 +48,9 @@ https://github.com/hamasakir66/turtlbot3/assets/64732352/9011138c-4263-4a96-8836
 <br>
 ```
 (適切なディレクトリに移動)
-<br> source devel/setup.bash
-<br> export TURTLEBOT3_MODEL=burger
-<br> roslaunch my_turtle turtle1.launch
+source devel/setup.bash
+export TURTLEBOT3_MODEL=burger
+roslaunch my_turtle turtle1.launch
 ```
 <br>
 <br>これにて、実行ができる。
