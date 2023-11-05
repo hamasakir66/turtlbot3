@@ -71,15 +71,14 @@ export TURTLEBOT_MODEL=burger
 roslaunch turtlebot3_gazebo turtlebot3_world.launch
 ```
 <br>
-
-3. 三つ目のターミナル
+<br>3. 三つ目のターミナル
 ```
 source devel/setup.bash
 export TURTLEBOT_MODEL=burger
 roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml
 ```
 <br>
-4. 四つ目のターミナル
+<br>4. 四つ目のターミナル
 ```
 source devel/setup.bash
 export TURTLEBOT_MODEL=burger
