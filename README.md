@@ -64,21 +64,21 @@ source devel/setup.bash
 roscore
 ```
 <br>
-<br>2. 二つ目のターミナル
+2. 二つ目のターミナル
 ```
 source devel/setup.bash
 export TURTLEBOT_MODEL=burger
 roslaunch turtlebot3_gazebo turtlebot3_world.launch
 ```
 <br>
-<br>3. 三つ目のターミナル
+3. 三つ目のターミナル
 ```
 source devel/setup.bash
 export TURTLEBOT_MODEL=burger
 roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml
 ```
 <br>
-<br>4. 四つ目のターミナル
+4. 四つ目のターミナル
 ```
 source devel/setup.bash
 export TURTLEBOT_MODEL=burger
