@@ -54,3 +54,36 @@ roslaunch my_turtle turtle1.launch
 ```
 <br>
 <br>これにて、実行ができる。
+
+
+## それができないとき
+4つのターミナルで、実行できます。
+１. 一つ目のターミナル
+```
+source devel/setup.bash
+roscore
+```
+<br>
+2. 二つ目のターミナル
+```
+source devel/setup.bash
+export TURTLEBOT_MODEL=burger
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
+```
+<br>
+3. 三つ目のターミナル
+```
+source devel/setup.bash
+export TURTLEBOT_MODEL=burger
+roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml
+```
+<br>
+4. 四つ目のターミナル
+```
+source devel/setup.bash
+export TURTLEBOT_MODEL=burger
+rosrun my_turtle stuck.py
+```
+<br>
+で実行できる。
+これを統合したのがlaunch ファイルである。
