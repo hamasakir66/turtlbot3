@@ -58,19 +58,20 @@ roslaunch my_turtle turtle1.launch
 
 ## それができないとき
 4つのターミナルで、実行できます。
-１. 一つ目のターミナル
+<br>１. 一つ目のターミナル
 ```
 source devel/setup.bash
 roscore
 ```
 <br>
-2. 二つ目のターミナル
+<br>2. 二つ目のターミナル
 ```
 source devel/setup.bash
 export TURTLEBOT_MODEL=burger
 roslaunch turtlebot3_gazebo turtlebot3_world.launch
 ```
 <br>
+
 3. 三つ目のターミナル
 ```
 source devel/setup.bash
